@@ -1,14 +1,20 @@
 //ROVANI ATTRIBUTES
 var xRovani = 200;
 var yRovani = 732;
-var rovaniSpeed = 10;
-var rovani = new Image();
-rovani.src = 'assets/images/rovani.png';
-function drawChar(xRovani, yRovani){
+var rovaniSpeed = 30;
+var actorWidth = 55;
+var actorHeight = 66;
+
+
+function drawChar(){
+  var rovani = new Image();
+  rovani.src = 'assets/images/rovani.png';
   rovani.onload = function(){
-    context.drawImage(rovani, xRovani, yRovani, 50, 60)
+    context.drawImage(rovani, xRovani, yRovani, actorWidth, actorHeight)
   }
 }
+
+ 
 //KEYBOARD
 var left = 37;
 var up = 38;
@@ -16,13 +22,16 @@ var right = 39;
 var down = 40;
 
 
+
 function moveChar(event){
   if (event.keyCode == left ){
     xRovani -= rovaniSpeed    
-    console.log('work')
+    console.log(xRovani)
   }
   else if (event.keyCode == right){
     xRovani += rovaniSpeed
+    console.log(xRovani)
+
   }
   else if (event.keyCode == up){
     yRovani -= rovaniSpeed
@@ -33,3 +42,4 @@ function moveChar(event){
 }
 
 document.onkeydown = moveChar;
+

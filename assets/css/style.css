@@ -1,3 +1,7 @@
+body{
+  font-family: 'Blaka Hollow', cursive;
+}
+
 .canvas__container{
   width: 100%;
   text-align: center;
