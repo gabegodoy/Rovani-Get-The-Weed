@@ -3,6 +3,13 @@ var context = canvas.getContext('2d');
 
 
 
+//SOUNDS
+var backgroundSound = new Audio('assets/sounds/backgroundSound.mp3');
+var crashSound = new Audio('assets/sounds/crashSound.wav');
+var pointSound = new Audio('assets/sounds/pointSound.mp3');
+
+backgroundSound.play();
+
 
 //ROAD ATTRIBUTES
 function drawRoad(){
@@ -17,13 +24,16 @@ function drawWeed(){
   var weed = new Image();
   weed.src = 'assets/images/weed.png';
   weed.onload = function(){
-    context.drawImage(weed, 800, 4, 50, 60)
+
+    for (var i=-20; i<1000; i += 75){
+      context.drawImage(weed, i, -10, 75, 90)
+    }
 }
 }
 
-function clearScreen(){
+/* function clearScreen(){
   context.clearRect(0, 0, 1000, 800);
-}
+} */
 
 function draw (){
  // clearScreen()

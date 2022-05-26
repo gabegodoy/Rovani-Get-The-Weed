@@ -9,11 +9,13 @@ var score = 0;
 }  */
 
 function makeScore(){
-  if (yRovani <= 20 && xRovani >= 780){
+  if (yRovani <= 20){
     //points.play();
     score++
     xRovani = 200;
     yRovani = 732;
+    pointSound.play();
+  
   }
 }
 
@@ -32,6 +34,7 @@ function checkColision(){
             score--
             xRovani = 200;
             yRovani = 732;
+            crashSound.play();
 
           }
         }
