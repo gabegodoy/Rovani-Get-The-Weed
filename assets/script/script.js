@@ -8,8 +8,9 @@ var backgroundSound = new Audio('assets/sounds/backgroundSound.mp3');
 var crashSound = new Audio('assets/sounds/crashSound.wav');
 var pointSound = new Audio('assets/sounds/pointSound.mp3');
 
-backgroundSound.play();
-
+function playMusic(){
+  backgroundSound.play();
+}
 
 //ROAD ATTRIBUTES
 function drawRoad(){
@@ -51,6 +52,7 @@ function draw (){
 
 }
 
+setInterval(playMusic, 50);
 setInterval(draw, 20);
 
 
