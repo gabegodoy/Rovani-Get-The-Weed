@@ -149,3 +149,21 @@ main{
 
 
 }
+
+@media screen and (max-width: 1280px){
+
+  h1{
+    width:80%
+  }
+
+  .instructions__container{
+    display: none;
+  }
+
+  .score__container{
+    width: 80%;
+  }
+
+
+
+}
