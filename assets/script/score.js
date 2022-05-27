@@ -8,7 +8,13 @@ var score = 0;
   context.fillText(score + ' Joints', canvas.width/2, 100)
 }  */
 
+var scoreOnScreen = document.querySelector('.score__images__container');
+var myScore = document.createElement('img')
+
+
+
 function makeScore(){
+
   if (yRovani <= 20){
     //points.play();
     score++
@@ -16,7 +22,13 @@ function makeScore(){
     yRovani = 732;
     pointSound.play();
   
+
+    // myScore.innerText = score
+    myScore.src = 'assets/images/weed.png'
+    scoreOnScreen.appendChild(myScore)
+
   }
+
 }
 
 
@@ -35,6 +47,7 @@ function checkColision(){
             xRovani = 200;
             yRovani = 732;
             crashSound.play();
+            scoreOnScreen.removeChild(myScore)
 
           }
         }
