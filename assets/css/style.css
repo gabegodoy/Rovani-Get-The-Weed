@@ -126,4 +126,26 @@ main{
 }
 
 
+@media screen and (max-width: 1640px){
+ 
+  .instructions__container{
+    order: 2;
+    margin-top: 2rem;
+    width: 80%;
+  }
 
+  .instructions__image{
+    display: none;
+  }
+
+  .instructions__text{
+    margin-block-end: 0em;
+  
+  }
+
+  .canvas__container{
+    margin-left: 3rem;
+  }
+
+
+}
