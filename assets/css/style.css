@@ -1,17 +1,18 @@
 body{
   font-family: 'Press Start 2P', cursive;;
+  margin: 0;
 }
 
 h1{
   margin: 0 auto;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   margin-bottom: 1.5rem;
-  width: 80%;
-  font-size: 4rem;
+  width: 100%;
+  font-size: 2.5rem;
   font-weight: 100;
   color: green;
   text-align: center;
-  line-height: 5rem;
+  line-height: 4rem;
 }
 
 main{
@@ -62,8 +63,8 @@ main{
 
 .score__title{
   font-weight: 100;
-  font-size: 5rem;
-  margin-top: 3.5rem;
+  font-size: 3rem;
+  margin-top: 6rem;
   margin-block-end: 0.5em;
 }
 
@@ -77,6 +78,41 @@ main{
   width: 5rem;
   height: 6rem;
 
+}
+
+.footer__container{
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(79, 107, 0);
+  margin-top: 2rem;
+  padding: 0 6rem;
+}
+
+.footer__personal{
+  display: flex;
+  gap: 3.125rem;
+}
+
+.footer__personal__name{
+  border-right: solid white 1px;
+  padding-right: 3.125rem;
+}
+
+
+.footer__media__list{
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 3.125rem;
+  list-style: none;
+}
+
+.footer__media__list img{
+  width: 2.5rem;
+  filter: invert(100%);
 }
 
 

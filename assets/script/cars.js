@@ -1,7 +1,7 @@
 //CARS ATTRIBUTES
-var xCars = [600, 600, 600, 600, 600, 300]
+var xCars = [900, 900, 900, 900, 900, 900]
 var yCars = [85, 190, 295, 415, 520, 630]
-var carSpeed = [4*2, 6*2, 5*2, 3*2, 4*2, 6*2]
+var carSpeed = [8, 12, 10, 6, 8, 12]
 
 
 function drawCars(){

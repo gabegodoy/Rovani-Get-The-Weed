@@ -1,37 +1,39 @@
 //SCORE ATTRIBUTES
 var score = 0;
 
-/*  function showScore(){
-  context.font = "100px"  
-  context.textAlign = "center"
-  context.fillStyle = 'Green'
-  context.fillText(score + ' Joints', canvas.width/2, 100)
-}  */
 
 var scoreOnScreen = document.querySelector('.score__images__container');
-var myScore = document.createElement('img')
-
+var myScore = document.createElement('img');
+myScore.src = 'assets/images/weed.png';
 
 
 function makeScore(){
-
+  
   if (yRovani <= 20){
-    //points.play();
-    score++
     xRovani = 200;
     yRovani = 732;
+
     pointSound.play();
-  
-
-    // myScore.innerText = score
-    myScore.src = 'assets/images/weed.png'
-    scoreOnScreen.appendChild(myScore)
-
+    
+    scoreUp();
+    
+    console.log(score)
   }
-
 }
 
+function scoreUp(){
+    score ++
+    myScore = document.createElement('img');
+    myScore.classList.add("score__image");
+    myScore.src = 'assets/images/weed.png';
+    scoreOnScreen.appendChild(myScore);
+} 
 
+function scoreDown(){
+  score --
+  document.querySelector('.score__image').remove()
+
+} 
 
 
 
@@ -42,13 +44,14 @@ function checkColision(){
         for (var counter = 0; counter <= actorWidth; counter++){
           if (xCars[i] == xRovani + counter
               && yCars[i] + count == yRovani + c){
-          // points.play();
-            score--
             xRovani = 200;
             yRovani = 732;
-            crashSound.play();
-            scoreOnScreen.removeChild(myScore)
 
+            crashSound.play();
+
+            scoreDown();
+
+            console.log(score)
           }
         }
       }

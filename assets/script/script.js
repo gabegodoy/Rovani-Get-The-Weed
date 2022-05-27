@@ -48,8 +48,6 @@ function draw (){
   checkColision();
 
   makeScore();
-  //showScore();
-
 }
 
 setInterval(playMusic, 50);

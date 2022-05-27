@@ -26,12 +26,9 @@ var down = 40;
 function moveChar(event){
   if (event.keyCode == left ){
     xRovani -= rovaniSpeed    
-    console.log(xRovani)
   }
   else if (event.keyCode == right){
     xRovani += rovaniSpeed
-    console.log(xRovani)
-
   }
   else if (event.keyCode == up){
     yRovani -= rovaniSpeed
