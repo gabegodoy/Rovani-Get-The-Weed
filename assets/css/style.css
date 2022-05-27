@@ -3,6 +3,7 @@ body{
   margin: 0;
 }
 
+
 h1{
   margin: 0 auto;
   margin-top: 1rem;
@@ -125,6 +126,9 @@ main{
   filter: invert(100%);
 }
 
+.mobile__view{
+  display: none;
+}
 
 @media screen and (max-width: 1640px){
  
@@ -166,4 +170,16 @@ main{
 
 
 
+}
+
+@media screen and (max-width: 1200px){
+  h1, main, .footer__container{
+    display: none;
+  }
+  .mobile__view{
+    display: block;
+    text-align: center;
+    margin-top: 50%;
+
+  }
 }
