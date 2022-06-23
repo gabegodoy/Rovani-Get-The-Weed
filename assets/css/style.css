@@ -126,6 +126,13 @@ main{
   filter: invert(100%);
 }
 
+#portfolio__image{
+  filter: none;
+  border: solid gainsboro 1px;
+  border-radius: 999px;
+}
+
+
 .mobile__view{
   display: none;
 }
